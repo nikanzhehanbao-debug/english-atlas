@@ -188,10 +188,29 @@ function LessonRunner({ lesson }: { lesson: ContentLesson }) {
                     ))}
                   </div>
                   <p className="notice">
-                    单字母 TTS 可能误读成词或缩写，尤其
-                    I、A、Z；不同英语语音包的字母名称也可能不同。此播放未作为标准录音核验，不用于听音判分。
+                    字母优先播放本站合成示范，含 “The letter…”
+                    引导；静态音频和设备回退语音都需实听复核。本轮不据此进行听音判分。
                   </p>
                 </>
+              )}
+              {lesson.lessonId === "L04" && (
+                <div className="core-words">
+                  {lesson.items
+                    .filter((item) =>
+                      lesson.cards[attempt.cardIndex].itemIds.includes(
+                        item.itemId,
+                      ),
+                    )
+                    .map((item) => (
+                      <div className="core-word" key={item.itemId}>
+                        <span lang="en">
+                          {item.term}
+                          <small lang="zh-CN">{item.meaning}</small>
+                        </span>
+                        <Speak text={item.term} />
+                      </div>
+                    ))}
+                </div>
               )}
               {lesson.cards[attempt.cardIndex].examples.map((ex) => (
                 <div className="example example-row" key={ex.en}>

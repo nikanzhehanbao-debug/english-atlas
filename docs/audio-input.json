@@ -1,0 +1,308 @@
+[
+  {
+    "text": "A",
+    "spokenText": "The letter A.",
+    "file": "letter-a.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "B",
+    "spokenText": "The letter B.",
+    "file": "letter-b.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "C",
+    "spokenText": "The letter C.",
+    "file": "letter-c.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "D",
+    "spokenText": "The letter D.",
+    "file": "letter-d.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "E",
+    "spokenText": "The letter E.",
+    "file": "letter-e.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "F",
+    "spokenText": "The letter F.",
+    "file": "letter-f.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "G",
+    "spokenText": "The letter G.",
+    "file": "letter-g.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "H",
+    "spokenText": "The letter H.",
+    "file": "letter-h.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "I",
+    "spokenText": "The letter I.",
+    "file": "letter-i.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "J",
+    "spokenText": "The letter J.",
+    "file": "letter-j.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "K",
+    "spokenText": "The letter K.",
+    "file": "letter-k.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "L",
+    "spokenText": "The letter L.",
+    "file": "letter-l.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "M",
+    "spokenText": "The letter M.",
+    "file": "letter-m.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "N",
+    "spokenText": "The letter N.",
+    "file": "letter-n.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "O",
+    "spokenText": "The letter O.",
+    "file": "letter-o.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "P",
+    "spokenText": "The letter P.",
+    "file": "letter-p.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "Q",
+    "spokenText": "The letter Q.",
+    "file": "letter-q.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "R",
+    "spokenText": "The letter R.",
+    "file": "letter-r.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "S",
+    "spokenText": "The letter S.",
+    "file": "letter-s.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "T",
+    "spokenText": "The letter T.",
+    "file": "letter-t.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "U",
+    "spokenText": "The letter U.",
+    "file": "letter-u.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "V",
+    "spokenText": "The letter V.",
+    "file": "letter-v.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "W",
+    "spokenText": "The letter W.",
+    "file": "letter-w.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "X",
+    "spokenText": "The letter X.",
+    "file": "letter-x.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "Y",
+    "spokenText": "The letter Y.",
+    "file": "letter-y.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "Z",
+    "spokenText": "The letter Z.",
+    "file": "letter-z.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "A is a letter.",
+    "spokenText": "A is a letter.",
+    "file": "phrase-026.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "B comes after A.",
+    "spokenText": "B comes after A.",
+    "file": "phrase-027.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "I is a letter.",
+    "spokenText": "I is a letter.",
+    "file": "phrase-028.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "M comes before N.",
+    "spokenText": "M comes before N.",
+    "file": "phrase-029.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "Z is the last letter.",
+    "spokenText": "Z is the last letter.",
+    "file": "phrase-030.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "A B C",
+    "spokenText": "The letter A. The letter B. The letter C.",
+    "file": "phrase-031.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "X Y Z",
+    "spokenText": "The letter X. The letter Y. The letter Z.",
+    "file": "phrase-032.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "A → a · B → b · M → m",
+    "spokenText": "Capital A, lowercase a. Capital B, lowercase b. Capital M, lowercase m.",
+    "file": "phrase-033.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "Mia",
+    "spokenText": "Mia",
+    "file": "phrase-034.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "A · apple · name",
+    "spokenText": "The letter A. Apple. Name.",
+    "file": "phrase-035.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "I am",
+    "spokenText": "I am",
+    "file": "phrase-036.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "I am Mia.",
+    "spokenText": "I am Mia.",
+    "file": "phrase-037.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "I'm",
+    "spokenText": "I'm",
+    "file": "phrase-038.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "I'm Leo.",
+    "spokenText": "I'm Leo.",
+    "file": "phrase-039.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "student",
+    "spokenText": "student",
+    "file": "phrase-040.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "I am a student.",
+    "spokenText": "I am a student.",
+    "file": "phrase-041.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "teacher",
+    "spokenText": "teacher",
+    "file": "phrase-042.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "I am a teacher.",
+    "spokenText": "I am a teacher.",
+    "file": "phrase-043.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "artist",
+    "spokenText": "artist",
+    "file": "phrase-044.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "I am an artist.",
+    "spokenText": "I am an artist.",
+    "file": "phrase-045.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "happy",
+    "spokenText": "happy",
+    "file": "phrase-046.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "I am happy.",
+    "spokenText": "I am happy.",
+    "file": "phrase-047.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "tired",
+    "spokenText": "tired",
+    "file": "phrase-048.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "I'm tired.",
+    "spokenText": "I'm tired.",
+    "file": "phrase-049.mp3",
+    "review": "pending-listening"
+  },
+  {
+    "text": "I'm Mia. I'm a student. I'm happy.",
+    "spokenText": "I'm Mia. I'm a student. I'm happy.",
+    "file": "phrase-050.mp3",
+    "review": "pending-listening"
+  }
+]

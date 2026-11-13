@@ -1337,3 +1337,36 @@ select {
     max-width: none;
   }
 }
+.audio-action {
+  min-height: 44px;
+  border: 1px solid var(--ink);
+  background: var(--cream);
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 12px;
+  margin-top: 6px;
+}
+.sound.is-playing {
+  background: #d9ead1;
+  border-color: #44734c;
+}
+.core-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+}
+.core-word {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px;
+  flex-wrap: wrap;
+}
+.core-word small {
+  display: block;
+  color: var(--muted);
+}
