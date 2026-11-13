@@ -45,7 +45,7 @@ npm run build
 - `src/components`：原创 SVG 向导、Web Speech API 朗读与中文降级。
 - `src/content`：独立类型、四单元地图、L01/L04 教学卡与题目。
 - `src/features/lesson`：纯函数判题、80% 通过阈值。
-- `src/lib/storage`：IndexedDB 仓库、schemaVersion=1、事务去重。
+- `src/lib/storage`：IndexedDB 仓库、schemaVersion=2、事务去重。
 - `src/pages`：六类页面、教学/练习/结算流程。
 - `src/styles`：Tailwind CSS 4 入口、主题变量、响应式与减少动画规则。
 - `src/tests`：Vitest、Testing Library、fake-indexeddb 测试。
@@ -88,3 +88,5 @@ npm run build
 ## M1.1 · Issue #2 分阶段评审
 
 语音阶段引入静态合成音频优先、可诊断的设备 TTS 回退。来源、许可、重建方法及待人工实听范围见 [AUDIO_SOURCES.md](docs/AUDIO_SOURCES.md)。静态文件覆盖与状态机测试不等于 Android 的实际可听输出和发音审校。各阶段通过 PR 评审；未经审查不合并、不部署，不开放其余十课。
+
+M1.1 的可选挑战位于基础课介绍页/结果页，保留原基础题目和成绩；数据库 v2 仅新增挑战记录表。内容、评分边界、旧数据升级与回滚限制见 [TEACHING_M11.md](docs/TEACHING_M11.md)。

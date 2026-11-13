@@ -624,3 +624,55 @@ body {
     transition: none !important;
   }
 }
+textarea {
+  font: inherit;
+  width: 100%;
+  max-width: 100%;
+  min-height: 150px;
+  padding: 13px;
+  border: 1px solid #8c9ba6;
+  border-radius: 10px;
+  resize: vertical;
+  background: white;
+  color: var(--ink);
+}
+.output-rubric {
+  margin: 18px 0;
+  padding: 18px;
+  background: #f2f5e9;
+  border: 1px dashed #9aaf8d;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.output-rubric ul {
+  list-style: disc;
+  padding-left: 23px;
+}
+.output-rubric li {
+  margin-bottom: 7px;
+}
+.output-rubric legend,
+.listening-selfcheck summary {
+  font-size: 13px;
+}
+.listening-selfcheck summary {
+  min-height: 44px;
+  cursor: pointer;
+  margin-top: 14px;
+  display: list-item;
+}
+.listening-selfcheck p[lang="en"] {
+  font-size: 22px;
+  font-weight: 650;
+  margin-top: 12px;
+}
+.challenge-result details {
+  margin: 20px 0;
+}
+.preserve-lines {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.challenge-result .answer-record {
+  overflow-wrap: anywhere;
+}

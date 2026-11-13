@@ -23,9 +23,11 @@ export function StateProvider({ children }: { children: ReactNode }) {
           setData(value);
           setError("");
         },
-        () => {
+        (reason: unknown) => {
           setError(
-            "无法读取本机学习记录。请检查浏览器是否允许 IndexedDB 存储后重试。",
+            reason instanceof Error
+              ? reason.message
+              : "无法读取本机学习记录。请检查浏览器是否允许 IndexedDB 存储后重试。",
           );
         },
       ),

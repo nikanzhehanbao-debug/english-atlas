@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useAtlas } from "./state";
 import { Home, Learn, Review, Atlas, Settings } from "../pages/Pages";
 import { LessonPage } from "../pages/Lesson";
+import { ChallengePage } from "../pages/Challenge";
 const nav = [
   ["/", "⌂", "首页"],
   ["/learn", "⚑", "课程"],
@@ -84,6 +85,7 @@ export function App() {
             <Route path="/" element={<Home />} />
             <Route path="/learn" element={<Learn />} />
             <Route path="/lesson/:id" element={<LessonPage />} />
+            <Route path="/lesson/:id/challenge" element={<ChallengePage />} />
             <Route path="/review" element={<Review />} />
             <Route path="/atlas" element={<Atlas />} />
             <Route path="/settings" element={<Settings />} />
