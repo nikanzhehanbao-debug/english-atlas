@@ -1,0 +1,31 @@
+node_modules/
+dist/
+*.local
+
+.npm-cache/
+*.tsbuildinfo
+
+# Local archives and generated logs
+*.zip
+*.log
+coverage/
+.DS_Store
+
+# Secrets, credentials, and local data must never enter this repository
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+.aws/
+.codex/
+.codex-attachments/
+backups/
+exports/
+*.sqlite
+*.sqlite3
+*.db
