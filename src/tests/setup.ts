@@ -8,7 +8,13 @@ afterEach(cleanup);
 beforeEach(async () => {
   const db = await database();
   const tx = db.transaction(
-    ["settings", "lessonProgress", "exerciseAttempts", "seenItems"],
+    [
+      "settings",
+      "lessonProgress",
+      "exerciseAttempts",
+      "seenItems",
+      "challengeAttempts",
+    ],
     "readwrite",
   );
   await Promise.all(

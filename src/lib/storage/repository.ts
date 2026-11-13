@@ -1,7 +1,8 @@
+import type { ChallengeAttempt } from "../../features/challenge/model";
 import { openDB, type DBSchema } from "idb";
 import { lessons } from "../../content/lessons";
 import { grade, result } from "../../features/lesson/grading";
-export const schemaVersion = 1;
+export const schemaVersion = 2;
 export interface Settings {
   dailyTargetMinutes: number;
   speechRate: number;
@@ -36,6 +37,7 @@ export interface Seen {
   seenAt: string;
 }
 interface AtlasDB extends DBSchema {
+  challengeAttempts: { key: string; value: ChallengeAttempt };
   settings: { key: string; value: Settings };
   lessonProgress: { key: string; value: Progress };
   exerciseAttempts: { key: string; value: Attempt };
@@ -47,15 +49,39 @@ export const defaults: Settings = {
   speechRate: 0.85,
   updatedAt: "",
 };
-export function database() {
-  return openDB<AtlasDB>("english-atlas-m1", schemaVersion, {
-    upgrade(db) {
-      db.createObjectStore("settings");
-      db.createObjectStore("lessonProgress", { keyPath: "lessonId" });
-      db.createObjectStore("exerciseAttempts", { keyPath: "attemptId" });
-      db.createObjectStore("seenItems", { keyPath: "itemId" });
+export function database(name = "english-atlas-m1") {
+  return new Promise<Awaited<ReturnType<typeof openDB<AtlasDB>>>>(
+    (resolve, reject) => {
+      let blocked = false;
+      const opening = openDB<AtlasDB>(name, schemaVersion, {
+        upgrade(db, oldVersion) {
+          if (oldVersion < 1) {
+            db.createObjectStore("settings");
+            db.createObjectStore("lessonProgress", { keyPath: "lessonId" });
+            db.createObjectStore("exerciseAttempts", { keyPath: "attemptId" });
+            db.createObjectStore("seenItems", { keyPath: "itemId" });
+          }
+          if (oldVersion < 2)
+            db.createObjectStore("challengeAttempts", { keyPath: "attemptId" });
+        },
+        blocked() {
+          blocked = true;
+          reject(
+            new Error(
+              "数据库升级正在等待旧标签页。请关闭其他英语图鉴页面后重新读取；现有数据不会被清空。",
+            ),
+          );
+        },
+        blocking() {
+          void opening.then((db) => db.close());
+        },
+      });
+      void opening.then((db) => {
+        if (blocked) db.close();
+        else resolve(db);
+      }, reject);
     },
-  });
+  );
 }
 export async function snapshot() {
   const db = await database();
@@ -64,15 +90,23 @@ export async function snapshot() {
     "lessonProgress",
     "exerciseAttempts",
     "seenItems",
+    "challengeAttempts",
   ]);
-  const [settings, progress, attempts, seen] = await Promise.all([
+  const [settings, progress, attempts, seen, challenges] = await Promise.all([
     tx.objectStore("settings").get("preferences"),
     tx.objectStore("lessonProgress").getAll(),
     tx.objectStore("exerciseAttempts").getAll(),
     tx.objectStore("seenItems").getAll(),
+    tx.objectStore("challengeAttempts").getAll(),
   ]);
   await tx.done;
-  return { settings: settings ?? defaults, progress, attempts, seen };
+  return {
+    settings: settings ?? defaults,
+    progress,
+    attempts,
+    seen,
+    challenges,
+  };
 }
 export async function saveSettings(settings: Settings) {
   const db = await database();

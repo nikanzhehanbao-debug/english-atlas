@@ -143,6 +143,15 @@ function LessonRunner({ lesson }: { lesson: ContentLesson }) {
                 ? "恢复本次学习 →"
                 : "开始本次学习 →"}
           </button>
+          <p className="caption">
+            基础内容觉得熟悉？可单独练习巩固与情境表达。
+          </p>
+          <Link
+            className="button secondary"
+            to={`/lesson/${lesson.lessonId}/challenge`}
+          >
+            可选进阶挑战 →
+          </Link>
         </section>
       ) : (
         <>
@@ -331,6 +340,12 @@ function LessonRunner({ lesson }: { lesson: ContentLesson }) {
                   重新学习
                 </button>
               </div>
+              <Link
+                className="button secondary"
+                to={`/lesson/${lesson.lessonId}/challenge`}
+              >
+                可选进阶挑战 →
+              </Link>
               <details>
                 <summary>查看本次答题记录</summary>
                 {attempt.answers.map((a) => {
