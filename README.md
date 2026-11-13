@@ -84,3 +84,7 @@ npm run build
 开发机启动 Vite 后，可用 USB 调试执行 `adb reverse tcp:5173 tcp:5173`，在安卓 Chrome 打开 `http://localhost:5173/english-atlas/`。或者同一受信局域网访问 Vite 输出的 Network 地址；运行所在机器必须能被设备访问，云环境内的 localhost 并不是手机 localhost。
 
 按报告清单检查 360/390/430px 手机、800/1024px 平板；完成两课、输入与组句、中断恢复、退出浏览器重开、返回导航、设置保存、发音与无语音包降级。保持同一访问地址与普通浏览模式。
+
+## M1.1 · Issue #2 分阶段评审
+
+语音阶段引入静态合成音频优先、可诊断的设备 TTS 回退。来源、许可、重建方法及待人工实听范围见 [AUDIO_SOURCES.md](docs/AUDIO_SOURCES.md)。静态文件覆盖与状态机测试不等于 Android 的实际可听输出和发音审校。各阶段通过 PR 评审；未经审查不合并、不部署，不开放其余十课。

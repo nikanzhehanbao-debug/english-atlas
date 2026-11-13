@@ -1,0 +1,308 @@
+{
+  "A": {
+    "file": "letter-a.mp3",
+    "spokenText": "The letter A.",
+    "review": "pending-listening",
+    "sha256": "1114ad5b091e1e77b8a7ca072977591168a0617f845cd30184246b3bbd4330df"
+  },
+  "B": {
+    "file": "letter-b.mp3",
+    "spokenText": "The letter B.",
+    "review": "pending-listening",
+    "sha256": "2eeaf5d57a069256b85369edf94516f0f80183c6cc0c363029e0f169faa139ac"
+  },
+  "C": {
+    "file": "letter-c.mp3",
+    "spokenText": "The letter C.",
+    "review": "pending-listening",
+    "sha256": "2a6d4221b30a5c4c9e0d484c0bd47527429431805ef2058d825adabe3b5989b9"
+  },
+  "D": {
+    "file": "letter-d.mp3",
+    "spokenText": "The letter D.",
+    "review": "pending-listening",
+    "sha256": "3d449d0fca1ec2b5a0f9d5ad7d7e381db41d0aa9943ac59445b96bfc7416ff6e"
+  },
+  "E": {
+    "file": "letter-e.mp3",
+    "spokenText": "The letter E.",
+    "review": "pending-listening",
+    "sha256": "44ad6519b65e8ff2f32908bae9aa9dad72558a1150e9bd759324f28febabf449"
+  },
+  "F": {
+    "file": "letter-f.mp3",
+    "spokenText": "The letter F.",
+    "review": "pending-listening",
+    "sha256": "9f4566c05fcf4818ccc2aab2726903ca8e374545bb256b780667f7504f6810aa"
+  },
+  "G": {
+    "file": "letter-g.mp3",
+    "spokenText": "The letter G.",
+    "review": "pending-listening",
+    "sha256": "9fe3e23e59f3ac0f0bf2b9de0b9763005e8f03b95f84ab07f9e87e2f91382d6d"
+  },
+  "H": {
+    "file": "letter-h.mp3",
+    "spokenText": "The letter H.",
+    "review": "pending-listening",
+    "sha256": "ef88efebfafa8c6a92cf430281e1ac3b932177f4d9e6e6905186d8f9d8f2c87c"
+  },
+  "I": {
+    "file": "letter-i.mp3",
+    "spokenText": "The letter I.",
+    "review": "pending-listening",
+    "sha256": "7c49bda8f4ead3bda23afa6bf38b08778a673ede2ef64f33bab4cd8b9e744dbd"
+  },
+  "J": {
+    "file": "letter-j.mp3",
+    "spokenText": "The letter J.",
+    "review": "pending-listening",
+    "sha256": "1a7b2ec98d56839f8db1abf7d3dc4adb6bcd7704ae5c0d76991bdf8b2d7b79a2"
+  },
+  "K": {
+    "file": "letter-k.mp3",
+    "spokenText": "The letter K.",
+    "review": "pending-listening",
+    "sha256": "c1487af9db6fc2ed889eb6d70946ad2caf51a4b8c92cfff0ae5a3c6034710c21"
+  },
+  "L": {
+    "file": "letter-l.mp3",
+    "spokenText": "The letter L.",
+    "review": "pending-listening",
+    "sha256": "bf1801cd286e1c552a1d4cda876cafb92d21aaa2248429d27c909cd159421e61"
+  },
+  "M": {
+    "file": "letter-m.mp3",
+    "spokenText": "The letter M.",
+    "review": "pending-listening",
+    "sha256": "2216574aa379fed260c84e203891e5c4f0a847500cb11a91208fddfaac3ec38a"
+  },
+  "N": {
+    "file": "letter-n.mp3",
+    "spokenText": "The letter N.",
+    "review": "pending-listening",
+    "sha256": "80c5d52f99c05d4836ddabba35527579330809a03afbaa429548fedc1f433671"
+  },
+  "O": {
+    "file": "letter-o.mp3",
+    "spokenText": "The letter O.",
+    "review": "pending-listening",
+    "sha256": "98116522dc2587dda5aba92fd7fced5a5960398b0403abe1a524ebc34f544bae"
+  },
+  "P": {
+    "file": "letter-p.mp3",
+    "spokenText": "The letter P.",
+    "review": "pending-listening",
+    "sha256": "8c6ab7e1907c889671628325aa681664e6be6e4df5d39dca3d7f5239162b24bc"
+  },
+  "Q": {
+    "file": "letter-q.mp3",
+    "spokenText": "The letter Q.",
+    "review": "pending-listening",
+    "sha256": "2a6df7f070b39ce8d5ba746ee0cbfe0b410c74d7d9d7bb386096afba89c66c8d"
+  },
+  "R": {
+    "file": "letter-r.mp3",
+    "spokenText": "The letter R.",
+    "review": "pending-listening",
+    "sha256": "09150cee3c8908264e1c8e6c65b8e2cb57dec1161fb86289c85aabeee8c0a4fe"
+  },
+  "S": {
+    "file": "letter-s.mp3",
+    "spokenText": "The letter S.",
+    "review": "pending-listening",
+    "sha256": "cf63baf6ed270aae3f98d2cc39f70e4f25653dc358c50578c79ad797581cdc69"
+  },
+  "T": {
+    "file": "letter-t.mp3",
+    "spokenText": "The letter T.",
+    "review": "pending-listening",
+    "sha256": "464ad05ac1a3552b9d92d6535057dda5cb08b12fe8471fb040ee958bd9aa9897"
+  },
+  "U": {
+    "file": "letter-u.mp3",
+    "spokenText": "The letter U.",
+    "review": "pending-listening",
+    "sha256": "c71d9bfc6388da93e80264395ab7d41713ec8195a9db11ea9f344157a8161fd0"
+  },
+  "V": {
+    "file": "letter-v.mp3",
+    "spokenText": "The letter V.",
+    "review": "pending-listening",
+    "sha256": "eacacfc559e64e3f454802d05190e24e088969adf795f45fcf59e588f6ff609d"
+  },
+  "W": {
+    "file": "letter-w.mp3",
+    "spokenText": "The letter W.",
+    "review": "pending-listening",
+    "sha256": "0020b1c4c4ba75218bcc5b632a611824761fcea67dddd4a81f8303c88c344fa8"
+  },
+  "X": {
+    "file": "letter-x.mp3",
+    "spokenText": "The letter X.",
+    "review": "pending-listening",
+    "sha256": "c1bd3d42899b81bafdca61cf45aec0f200256d4df3671be9f525cc9be8de9c1b"
+  },
+  "Y": {
+    "file": "letter-y.mp3",
+    "spokenText": "The letter Y.",
+    "review": "pending-listening",
+    "sha256": "61b91f67e7db80f3a0c89fc5a464d2ebc7f6aca7da05b9d715408e093f5a46b7"
+  },
+  "Z": {
+    "file": "letter-z.mp3",
+    "spokenText": "The letter Z.",
+    "review": "pending-listening",
+    "sha256": "92f1ed0f05acdb4f18a6bfc4c3e8490a334afa0f96493883e1c9860b44df7e27"
+  },
+  "A is a letter.": {
+    "file": "phrase-026.mp3",
+    "spokenText": "A is a letter.",
+    "review": "pending-listening",
+    "sha256": "74934e6270c962f04df8165c4078a1d4d39b656825f22736dd93e92591d67134"
+  },
+  "B comes after A.": {
+    "file": "phrase-027.mp3",
+    "spokenText": "B comes after A.",
+    "review": "pending-listening",
+    "sha256": "9a32b59d555255f349c07c848e065f662a1b0ca1bf4de4528cd322a2d1907dce"
+  },
+  "I is a letter.": {
+    "file": "phrase-028.mp3",
+    "spokenText": "I is a letter.",
+    "review": "pending-listening",
+    "sha256": "34854cd25aa07f0b165f391478ab1a47cb36fb59c22e23b3878319beef9c9aa4"
+  },
+  "M comes before N.": {
+    "file": "phrase-029.mp3",
+    "spokenText": "M comes before N.",
+    "review": "pending-listening",
+    "sha256": "e1db268bd7e4fd072f8ed9bb267aa0c610727edb7bcc92310f9e87573183dbd3"
+  },
+  "Z is the last letter.": {
+    "file": "phrase-030.mp3",
+    "spokenText": "Z is the last letter.",
+    "review": "pending-listening",
+    "sha256": "9ea493c9e163fc0df9b2f939c9baf2254f277661a2832dee47d529b9366b39aa"
+  },
+  "A B C": {
+    "file": "phrase-031.mp3",
+    "spokenText": "The letter A. The letter B. The letter C.",
+    "review": "pending-listening",
+    "sha256": "43d2bf056742f343f98b4f67940e1fc7215d53359752f7690021f870f1660489"
+  },
+  "X Y Z": {
+    "file": "phrase-032.mp3",
+    "spokenText": "The letter X. The letter Y. The letter Z.",
+    "review": "pending-listening",
+    "sha256": "73d2f4fe7824fafd080780755c716dae4af5761f4479782d82734913361b390d"
+  },
+  "A → a · B → b · M → m": {
+    "file": "phrase-033.mp3",
+    "spokenText": "Capital A, lowercase a. Capital B, lowercase b. Capital M, lowercase m.",
+    "review": "pending-listening",
+    "sha256": "6ae485824483aec4e3259f760c0b3c4a73d8201150f42d3df51c486b3991e5cc"
+  },
+  "Mia": {
+    "file": "phrase-034.mp3",
+    "spokenText": "Mia",
+    "review": "pending-listening",
+    "sha256": "facd74c04978e1774a83a450fb9cce32481fd8b0266ae218aad772927eb11c47"
+  },
+  "A · apple · name": {
+    "file": "phrase-035.mp3",
+    "spokenText": "The letter A. Apple. Name.",
+    "review": "pending-listening",
+    "sha256": "08621c07e561dc17170ddca115877fc374ecdba53aeb39dca492e0d8cfafc456"
+  },
+  "I am": {
+    "file": "phrase-036.mp3",
+    "spokenText": "I am",
+    "review": "pending-listening",
+    "sha256": "0f2083ee8ee5f48fa1a306e83262b08af0b4c2b1f20fbf78d84f3f1dc02d6d3f"
+  },
+  "I am Mia.": {
+    "file": "phrase-037.mp3",
+    "spokenText": "I am Mia.",
+    "review": "pending-listening",
+    "sha256": "35743d333ab19f8c0a73118ff20d14e20aa755b53637d7bf550d861195828e78"
+  },
+  "I'm": {
+    "file": "phrase-038.mp3",
+    "spokenText": "I'm",
+    "review": "pending-listening",
+    "sha256": "d9eac5e8ad0b7bcb73ca2e25557632959b2cbf61e58e73a40ad63cddcfa74135"
+  },
+  "I'm Leo.": {
+    "file": "phrase-039.mp3",
+    "spokenText": "I'm Leo.",
+    "review": "pending-listening",
+    "sha256": "90d52098c1b6284c4855a5392f3446ddb14ec60364a6bac269124243c2b6b491"
+  },
+  "student": {
+    "file": "phrase-040.mp3",
+    "spokenText": "student",
+    "review": "pending-listening",
+    "sha256": "f9c4fe95d30c72b30ebde6b88e37dea5e3ecab9bdfdcb96a2f509f40c33d8080"
+  },
+  "I am a student.": {
+    "file": "phrase-041.mp3",
+    "spokenText": "I am a student.",
+    "review": "pending-listening",
+    "sha256": "8c862841ed8f85e53a2010a5c1264aeab6ccc4e3cb3a7caf94d1767f4d9d9faf"
+  },
+  "teacher": {
+    "file": "phrase-042.mp3",
+    "spokenText": "teacher",
+    "review": "pending-listening",
+    "sha256": "5f5d6f6d13aaa3afb78eecb027b57a33ed27caddbb7c9a565400cb3653bf9c2f"
+  },
+  "I am a teacher.": {
+    "file": "phrase-043.mp3",
+    "spokenText": "I am a teacher.",
+    "review": "pending-listening",
+    "sha256": "56ba04dbebe1322c17d5e8c5499794f0d66413a3eac360177e34fdab63085aab"
+  },
+  "artist": {
+    "file": "phrase-044.mp3",
+    "spokenText": "artist",
+    "review": "pending-listening",
+    "sha256": "16c4b63c1b716839e5acd6a3179c971a59973053fa72a43d00f4c16df676d8ce"
+  },
+  "I am an artist.": {
+    "file": "phrase-045.mp3",
+    "spokenText": "I am an artist.",
+    "review": "pending-listening",
+    "sha256": "c06e8b7c215b277c9d69a8d1594c78178602f861e421416b404b70c6bcca76ba"
+  },
+  "happy": {
+    "file": "phrase-046.mp3",
+    "spokenText": "happy",
+    "review": "pending-listening",
+    "sha256": "877a16a80995fcd9853da92c9df4cc2ce619c5af8b301e51ee018b006550b6a7"
+  },
+  "I am happy.": {
+    "file": "phrase-047.mp3",
+    "spokenText": "I am happy.",
+    "review": "pending-listening",
+    "sha256": "5b06fd18c986d21f31432b1b01a0dc427dcb4272ade87b7f9e2014e334edd062"
+  },
+  "tired": {
+    "file": "phrase-048.mp3",
+    "spokenText": "tired",
+    "review": "pending-listening",
+    "sha256": "a00289969a0610b562d09f046841a6ef18610249334b90922858eb825958586b"
+  },
+  "I'm tired.": {
+    "file": "phrase-049.mp3",
+    "spokenText": "I'm tired.",
+    "review": "pending-listening",
+    "sha256": "39e3ca750cec5e181831747c2e7dc49e8fc20b835f1bfcec37946ca179b3dfad"
+  },
+  "I'm Mia. I'm a student. I'm happy.": {
+    "file": "phrase-050.mp3",
+    "spokenText": "I'm Mia. I'm a student. I'm happy.",
+    "review": "pending-listening",
+    "sha256": "91f92970181c9a03e60d85bf5974d93098ce75cc8044fac01fbe78406e80c755"
+  }
+}
