@@ -4,6 +4,7 @@ import { HashRouter } from "react-router-dom";
 import { StateProvider } from "./state";
 import { App } from "./App";
 import "../styles/theme.css";
+import "../styles/field-guide.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

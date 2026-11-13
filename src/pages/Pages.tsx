@@ -4,6 +4,7 @@ import { useAtlas } from "../app/state";
 import { lessons, units } from "../content/lessons";
 import { saveSettings } from "../lib/storage/repository";
 import { Guide } from "../components/Guide";
+import { FieldArt, Badge } from "../components/FieldArt";
 import { Speak } from "../components/Speak";
 export function PageTitle({
   eyebrow,
@@ -47,8 +48,8 @@ export function Home() {
       >
         从一个字母、一句话开始，慢慢认识更大的世界。
       </PageTitle>
-      <section className="hero">
-        <div>
+      <section className="hero field-cover">
+        <div className="cover-copy">
           <span className="tag">起点地区 · 探索笔记 01</span>
           <h2>
             你好，英语探索者<span className="pixel">✦</span>
@@ -66,7 +67,15 @@ export function Home() {
             {next === "L04" ? " · 体验课程" : ""}
           </small>
         </div>
-        <Guide />
+        <div className="cover-window">
+          <FieldArt region={0} />
+          <Guide />
+          <span className="companion-label">
+            原创伙伴 / 小苔
+            <br />
+            <b>FIELD COMPANION 01</b>
+          </span>
+        </div>
       </section>
       <div className="stats">
         <section className="stat">
@@ -138,6 +147,13 @@ export function Learn() {
       <div className="unit-grid">
         {units.map((unit, i) => (
           <section className={`unit unit-${i}`} key={unit.title}>
+            <div className="region-window">
+              <FieldArt region={i} />
+              <span className="region-label">
+                REGION 0{i + 1} /{" "}
+                {["发音林地", "交流河湾", "日常山谷", "生活营地"][i]}
+              </span>
+            </div>
             <header>
               <span className="unit-number">0{i + 1}</span>
               <div>
@@ -171,7 +187,12 @@ export function Learn() {
                           : "后续开放"}
                       </span>
                     </span>
-                    {open && <span aria-hidden="true">→</span>}
+                    {open &&
+                      (progress?.passed ? (
+                        <Badge earned />
+                      ) : (
+                        <span aria-hidden="true">→</span>
+                      ))}
                   </>
                 );
                 return (
@@ -225,6 +246,10 @@ export function Atlas() {
   const seen = new Set(data?.seen.map((s) => s.itemId));
   const items = Object.values(lessons)
     .flatMap((l) => l.items.map((item) => ({ ...item, lessonId: l.lessonId })))
+    .map((item, index) => ({
+      ...item,
+      atlasNumber: String(index + 1).padStart(3, "0"),
+    }))
     .filter((i) => seen.has(i.itemId));
   return (
     <>
@@ -251,6 +276,7 @@ export function Atlas() {
         <div className="atlas-grid">
           {items.map((item) => (
             <article className="card word-card" key={item.itemId}>
+              <div className="archive-tab">ATLAS No.{item.atlasNumber}</div>
               <div className="section-heading">
                 <span className="eyebrow">
                   {item.lessonId} / {item.itemId.split("-").slice(1).join("-")}
