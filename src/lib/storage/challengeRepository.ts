@@ -66,12 +66,18 @@ export async function answerChallenge(
       selfRating !== "practice" &&
       selfRating !== "independent"
     )
-      throw Error("请先参考要点并选择自评");
+      throw Error("请先独立作答并选择自评（提交前初步自评）");
     attempt.answers.push({
       questionId,
       answer: answer.trim(),
       correct: question.type === "output" ? null : grade(question, answer),
-      ...(question.type === "output" ? { selfRating } : {}),
+      ...(question.type === "output"
+        ? {
+            selfRating,
+            initialSelfRating: selfRating,
+            outputMode: "independent-first" as const,
+          }
+        : {}),
       answeredAt: now(),
     });
     attempt.updatedAt = now();
@@ -102,4 +108,32 @@ export function challengeSummary(attempt: ChallengeAttempt) {
     total: closed.length,
     output: attempt.answers.find((a) => a.correct === null),
   };
+}
+
+/** Revise only a saved output's self-assessment; never rewrite its original answer or score. */
+export async function reviseChallengeSelfRating(
+  attemptId: string,
+  questionId: string,
+  selfRating: ChallengeAnswer["selfRating"],
+) {
+  if (selfRating !== "practice" && selfRating !== "independent")
+    throw Error("请选择有效的参考后自评");
+  const db = await database();
+  const tx = db.transaction("challengeAttempts", "readwrite");
+  const attempt = await tx.store.get(attemptId);
+  if (!attempt) throw Error("找不到挑战记录");
+  const question = content(attempt.lessonId).questions.find(
+    (q) => q.questionId === questionId,
+  );
+  const answer = attempt.answers.find((a) => a.questionId === questionId);
+  if (question?.type !== "output" || !answer || answer.correct !== null)
+    throw Error("只能修改已保存自主表达的自评");
+  if (answer.selfRating !== selfRating) {
+    answer.selfRating = selfRating;
+    answer.selfRatingUpdatedAt = now();
+    attempt.updatedAt = answer.selfRatingUpdatedAt;
+    await tx.store.put(attempt);
+  }
+  await tx.done;
+  return attempt;
 }

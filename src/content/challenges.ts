@@ -78,7 +78,7 @@ export const challenges: Record<
         questionId: "L01-CH1-Q7",
         type: "output",
         prompt:
-          "自己选一个 3–5 个字母的英文名（可用化名），写出原名、大写拼写和小写拼写。参考格式：Mia / M I A / m i a。这里只做文字自检，不自动判分。",
+          "自己选一个 3–5 个字母的英文名（可用化名），分三段写：原名 / 以空格分隔的全大写字母 / 以空格分隔的全小写字母。先独立完成，再选择初步自评；提交后展示范例与检查要点，不自动判分。",
         reference: "例如：Leo / L E O / l e o。你可以使用其他英文名。",
         checkpoints: [
           "大写和小写代表同一组字母",
@@ -146,7 +146,7 @@ export const challenges: Record<
         questionId: "L04-CH1-Q7",
         type: "output",
         prompt:
-          "在新同学见面会上，用 2–3 句英文介绍名字、身份与此刻感受。可用化名和课内词汇，不要求真实个人资料。自由表达只做参考与自评，不自动判错。",
+          "在新同学见面会上，用 2–3 句英文介绍名字、身份与此刻感受。可用化名和课内词汇，不要求真实个人资料。先独立完成，再选择初步自评；提交后展示范例与检查要点，不自动判错。",
         reference:
           "例如：I’m Mia. I’m a student. I’m happy. 也可以用完整形式 I am，或替换为其他合适名字、身份与感受。",
         checkpoints: [

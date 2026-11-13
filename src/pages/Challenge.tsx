@@ -12,6 +12,7 @@ import {
   answerChallenge,
   finishChallenge,
   challengeSummary,
+  reviseChallengeSelfRating,
 } from "../lib/storage/challengeRepository";
 import { PageTitle } from "./Pages";
 import { Speak } from "../components/Speak";
@@ -169,7 +170,25 @@ function ChallengeRunner({ id }: { id: string }) {
                 <div className="answer-record" key={q.questionId}>
                   <strong>{q.prompt}</strong>
                   <p className="preserve-lines">你的答案：{answer.answer}</p>
-                  <p>{q.type === "output" ? q.reference : q.explanation}</p>
+                  {q.type === "output" ? (
+                    <OutputReview
+                      key={`${attempt.attemptId}:${q.questionId}`}
+                      question={q}
+                      saved={answer}
+                      busy={busy}
+                      onSave={(rating) =>
+                        void run(() =>
+                          reviseChallengeSelfRating(
+                            attempt.attemptId,
+                            q.questionId,
+                            rating,
+                          ),
+                        )
+                      }
+                    />
+                  ) : (
+                    <p>{q.explanation}</p>
+                  )}
                   <p>
                     {answer.correct === null
                       ? "自主表达未自动评分"
@@ -241,16 +260,29 @@ function ChallengeRunner({ id }: { id: string }) {
                         : "再看一下这个要点"}
                   </strong>
                   <p className="preserve-lines">你的答案：{saved.answer}</p>
-                  <p>
-                    {question.type === "output"
-                      ? question.reference
-                      : question.explanation}
-                  </p>
+                  {question.type !== "output" && <p>{question.explanation}</p>}
                   {saved.correct === false && question.type !== "output" && (
                     <p>参考答案：{question.answers[0]}</p>
                   )}
                   <p className="caption">本项已保存，不会重复计分。</p>
                 </div>
+                {question.type === "output" && (
+                  <OutputReview
+                    key={`${attempt.attemptId}:${question.questionId}`}
+                    question={question}
+                    saved={saved}
+                    busy={busy}
+                    onSave={(rating) =>
+                      void run(() =>
+                        reviseChallengeSelfRating(
+                          attempt.attemptId,
+                          question.questionId,
+                          rating,
+                        ),
+                      )
+                    }
+                  />
+                )}
                 <button
                   className="button primary"
                   disabled={busy}
@@ -342,21 +374,18 @@ function ChallengeExercise({
           )}
         </>
       )}
-      {output && (
+      {output && !submitted && (
         <div className="output-rubric">
-          <p>参考：{question.reference}</p>
-          <ul>
-            {question.checkpoints.map((point) => (
-              <li key={point}>{point}</li>
-            ))}
-          </ul>
+          <p>
+            先独立写下答案并做初步自评；保存成功后才显示范例和完整检查要点。自评不等于客观能力评估。
+          </p>
           <fieldset disabled={submitted || busy}>
-            <legend>对照要点，自行评价（不影响基础成绩）</legend>
+            <legend>提交前初步自评（不影响基础成绩）</legend>
             <label className="option">
               <input
                 type="radio"
                 name="self-rating"
-                checked={(saved?.selfRating ?? rating) === "practice"}
+                checked={rating === "practice"}
                 onChange={() => setRating("practice")}
               />
               还需练习
@@ -365,7 +394,7 @@ function ChallengeExercise({
               <input
                 type="radio"
                 name="self-rating"
-                checked={(saved?.selfRating ?? rating) === "independent"}
+                checked={rating === "independent"}
                 onChange={() => setRating("independent")}
               />
               能独立完成
@@ -383,5 +412,81 @@ function ChallengeExercise({
         </button>
       )}
     </form>
+  );
+}
+
+function OutputReview({
+  question,
+  saved,
+  busy,
+  onSave,
+}: {
+  question: Extract<ChallengeQuestion, { type: "output" }>;
+  saved: ChallengeAnswer;
+  busy: boolean;
+  onSave: (rating: ChallengeAnswer["selfRating"]) => void;
+}) {
+  const [rating, setRating] = useState(saved.selfRating);
+  const label = (value: ChallengeAnswer["selfRating"]) =>
+    value === "independent"
+      ? "能独立完成"
+      : value === "practice"
+        ? "还需练习"
+        : "未记录";
+  return (
+    <section className="output-rubric" aria-label="提交后参考与自评">
+      <h3>提交后参考与检查要点</h3>
+      <p>{question.reference}</p>
+      <ul>
+        {question.checkpoints.map((point) => (
+          <li key={point}>{point}</li>
+        ))}
+      </ul>
+      {saved.outputMode === "independent-first" ? (
+        <p>提交前初步自评：{label(saved.initialSelfRating)}（已保留）</p>
+      ) : (
+        <p>历史自评：旧版可能已提前展示参考，不作为独立输出证据。</p>
+      )}
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          if (!busy && rating && rating !== saved.selfRating) onSave(rating);
+        }}
+      >
+        <fieldset disabled={busy}>
+          <legend>参考后自评（可修改，不计分）</legend>
+          <label className="option">
+            <input
+              type="radio"
+              name="post-reference-rating"
+              checked={rating === "practice"}
+              onChange={() => setRating("practice")}
+            />
+            参考后还需练习
+          </label>
+          <label className="option">
+            <input
+              type="radio"
+              name="post-reference-rating"
+              checked={rating === "independent"}
+              onChange={() => setRating("independent")}
+            />
+            参考后能独立完成
+          </label>
+        </fieldset>
+        <button
+          type="submit"
+          className="button secondary"
+          disabled={busy || !rating || rating === saved.selfRating}
+        >
+          {busy ? "正在保存…" : "保存参考后自评"}
+        </button>
+      </form>
+      <p role="status">
+        当前已保存自评：{label(saved.selfRating)}
+        {saved.selfRatingUpdatedAt ? " · 参考后自评已保存" : " · 尚未修改"}
+        。未自动评分。
+      </p>
+    </section>
   );
 }

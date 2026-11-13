@@ -13,6 +13,9 @@ export interface ChallengeAnswer {
   answer: string;
   correct: boolean | null;
   selfRating?: "practice" | "independent";
+  initialSelfRating?: "practice" | "independent";
+  outputMode?: "independent-first";
+  selfRatingUpdatedAt?: string;
   answeredAt: string;
 }
 export interface ChallengeAttempt {
